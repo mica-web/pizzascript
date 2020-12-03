@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-offwhite;
+  color: $color-offblack;
+  font-family: $font-base;
+  margin: 0;
+}
+
+main {
+  padding: $spacing-sm;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+[hidden] {
+  display: none !important;
+}

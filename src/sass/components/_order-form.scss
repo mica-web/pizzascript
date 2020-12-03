@@ -1,0 +1,125 @@
+$bp: 760px;
+
+.order-form {
+  section {
+    border-style: double;
+    border-width: 5px;
+    margin-bottom: $spacing-md;
+    padding: 0 $spacing-sm $spacing-sm;
+  }
+
+  h2 {
+    color: white;
+    font-family: $font-display;
+    font-size: 1.6rem;
+    margin: 0 (-$spacing-sm);
+    padding: $spacing-sm;
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: 800;
+  }
+
+  button {
+    background-color: $color-green;
+    border-radius: 6px;
+    color: white;
+    display: block;
+    font-size: 2em;
+    font-weight: 800;
+    margin: $spacing-md auto;
+    padding: $spacing-sm;
+    text-transform: uppercase;
+
+    &[disabled] {
+      background-color: silver;
+      cursor: not-allowed;
+    }
+
+    &:not([disabled]):hover,
+    &:not([disabled]):focus {
+      background-color: mix($color-green, black, 90%);
+    }
+  }
+
+  @media (min-width: $bp) {
+    display: grid;
+    column-gap: $spacing-sm;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.order-options {
+  border-color: $color-red;
+
+  h2 {
+    background-color: $color-red;
+  }
+}
+
+.options-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: -$spacing-sm;
+  margin-left: -$spacing-sm;
+
+  label {
+    border: 3px solid silver;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1 0 auto;
+    font-weight: 700;
+    margin: 0 $spacing-sm $spacing-xs;
+    padding: ($spacing-sm + 2px);
+    text-align: center;
+    transition: background $transition-default, border-color $transition-default, color $transition-default;
+    max-width: 160px;
+
+    &:hover,
+    &:focus {
+      border-color: $color-red;
+    }
+  }
+
+  input:checked+label {
+    background-color: $color-red;
+    border-color: white;
+    border-style: double;
+    border-width: 5px;
+    color: white;
+    padding: $spacing-sm;
+  }
+
+  input[type=radio]:checked+label {
+    cursor: default;
+  }
+}
+
+.order-receipt {
+  border-color: $color-green;
+
+  h2 {
+    background-color: $color-green;
+  }
+
+  span {
+    text-transform: lowercase;
+  }
+
+  @media (min-width: $bp) {
+    display: flex;
+    flex-direction: column;
+
+    >div {
+      flex: 1 0 auto;
+    }
+
+    .order-options[hidden]+& {
+      grid-column: 1/3;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

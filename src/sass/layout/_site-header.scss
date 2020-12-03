@@ -1,0 +1,42 @@
+.site-header {
+  background-color: $color-red;
+  color: white;
+  padding: $spacing-sm;
+
+  h1 {
+    margin: 0;
+  }
+
+  a,
+  span {
+    font-family: $font-script;
+    font-size: 115%;
+  }
+
+  a {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+
+    @media (min-width: 420px) {
+      max-width: 360px;
+    }
+  }
+
+  svg {
+    fill: white;
+    height: 100px;
+    transform-origin: center;
+    transition: transform 400ms ease-in-out;
+    width: 100px;
+  }
+}

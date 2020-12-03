@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>
+    {% if pageTitle %}
+    {{ pageTitle }} -
+    {% endif %}
+    {{ siteData.name }}
+  </title>
+
+  <link href="/css/styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Nunito+Sans:wght@700;800&family=Sofia&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/ico" href="https://cdn.glitch.com/9a93669c-cae5-4d66-884b-61b9877b1f9c%2Ffavicon.ico?v=1606085409257">
+</head>
+
+<body>
+
+  {{ content | safe }}
+
+  {% if pageTitle == "Place Your Order" %}
+  <script src="/js/order.js"></script>
+  {% endif %}
+
+</body>
+
+</html>

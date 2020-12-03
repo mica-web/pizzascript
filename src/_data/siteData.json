@@ -1,0 +1,37 @@
+{
+  "name": "PizzaScript",
+  "crusts": [{
+      "label": "Thin",
+      "id": "thin"
+    },
+    {
+      "label": "Thick",
+      "id": "thick"
+    },
+    {
+      "label": "Gluten-Free",
+      "id": "gf"
+    }
+  ],
+  "toppings": [{
+      "label": "Extra Cheese",
+      "id": "x-cheese"
+    },
+    {
+      "label": "Pineapple",
+      "id": "pineapple"
+    },
+    {
+      "label": "Sausage",
+      "id": "sausage"
+    },
+    {
+      "label": "Mushroooms",
+      "id": "mushroom"
+    },
+    {
+      "label": "Peppers",
+      "id": "pepper"
+    }
+  ]
+}

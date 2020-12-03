@@ -1,0 +1,48 @@
+---
+layout: default.html
+pageTitle: Place Your Order
+---
+
+<form action="" class="order-form">
+
+  <section class="order-options">
+    <h2>Make Your Pizza</h2>
+
+    <fieldset id="js-crust-triggers" class="u-fieldset-reset">
+      <legend>
+        <h3>Crust Style</h3>
+      </legend>
+      <div class="options-list">
+        {% for crust in siteData.crusts %}
+        <input type="radio" value="{{crust.id}}" name="crust" id="{{crust.id}}" class="u-sr-only">
+        <label for="{{crust.id}}">
+          {{crust.label}}
+        </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+
+    <fieldset id="js-toppings-triggers" class="u-fieldset-reset">
+      <legend>
+        <h3>Pizza Toppings</h3>
+      </legend>
+      <div class="options-list">
+        {% for topping in siteData.toppings %}
+        <input type="checkbox" value="{{topping.id}}" name="toppings" id="{{topping.id}}" class="u-sr-only">
+        <label for="{{topping.id}}">
+          {{topping.label}}
+        </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+
+  </section>
+
+  <section class="order-receipt">
+    <h2>Your Order</h2>
+    <p hidden>1 fresh <span id="js-crust-target"></span> pizza</p>
+    <div id="js-toppings-target"></div>
+    <button type="submit" disabled id="js-submit" class="u-button-reset">Submit</button>
+  </section>
+
+</form>

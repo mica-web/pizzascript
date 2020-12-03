@@ -1,0 +1,12 @@
+// Removes the default formatting from fieldset and legend elements
+.u-fieldset-reset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  legend {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+}
